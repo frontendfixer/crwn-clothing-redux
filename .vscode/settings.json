@@ -1,0 +1,29 @@
+{
+  // Editor Settings
+  "editor.fontFamily": "'Cascadia Code', 'FiraCode Nerd Font'",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.foldingStrategy": "indentation",
+  "editor.guides.bracketPairs": "active",
+  "editor.mouseWheelZoom": true,
+  "editor.rename.enablePreview": false,
+
+  "workbench.editor.enablePreview": false,
+
+  // ============ Emmit Config ===========
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.useInlineCompletions": true,
+  "emmet.syntaxProfiles": {
+    "jsx": {
+      "attr_quotes": "double"
+    }
+  },
+  "emmet.triggerExpansionOnTab": true
+}

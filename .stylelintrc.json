@@ -1,0 +1,46 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "@namics/stylelint-bem",
+    "stylelint-color-format",
+    "stylelint-rem-over-px"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "alpha-value-notation": "number",
+    "hue-degree-notation": "number",
+    "font-family-name-quotes": null,
+    "function-calc-no-unspaced-operator": true,
+    "plugin/stylelint-bem-namics": {
+      "patternPrefixes": [],
+      "helperPrefixes": []
+    },
+
+    "color-format/format": {
+      "format": "hsl"
+    },
+
+    "rem-over-px/rem-over-px": true,
+
+    "declaration-property-value-no-unknown": true,
+
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["tailwind", "layer"]
+      }
+    ],
+
+    "selector-class-pattern": null
+  },
+  "overrides": [
+    {
+      "customSyntax": "postcss-scss",
+      "files": ["src/*.scss", "src/**/*.scss"]
+    }
+  ]
+}
