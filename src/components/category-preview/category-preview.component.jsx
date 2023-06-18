@@ -11,7 +11,7 @@ const CategoryPreview = ({ title, products }) => {
     <CategoryContainer>
       <CategoryHeading>
         <span className="title">{title.toUpperCase()}</span>
-        <MoreButton to={title}>more&#10940;</MoreButton>
+        <MoreButton to={title}>more&#9656;</MoreButton>
       </CategoryHeading>
       <ProductPreview>
         {products
