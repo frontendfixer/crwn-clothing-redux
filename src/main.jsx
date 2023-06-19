@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import App from './App';
-import { CheckoutProvider } from './context/checkout.context';
 import './main.scss';
 import { store, persistor } from './store/store';
 
@@ -14,9 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
-        <CheckoutProvider>
-          <App />
-        </CheckoutProvider>
+        <App />
       </BrowserRouter>
     </PersistGate>
   </Provider>

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,13 +7,14 @@ import {
   DropdownContainer,
   EmptyMessage,
 } from './cart-dropdown.style';
-import { CheckoutContext } from '../../context/checkout.context';
 import { setIsCartOpen } from '../../store/cart/cart.action';
 import {
   selectCartItems,
   selectCartCount,
   selectIsCartOpen,
 } from '../../store/cart/cart.selector';
+import { setIsCheckoutOpen } from '../../store/checkout/checkout.action';
+import { selectCheckout } from '../../store/checkout/checkout.selector';
 import Button from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
 
@@ -24,20 +25,19 @@ const CartDropdown = () => {
   const cartItems = useSelector(selectCartItems);
   const isCartOpen = useSelector(selectIsCartOpen);
   const cartCount = useSelector(selectCartCount);
-
-  const { isCheckoutOpen, setIsCheckoutOpen } = useContext(CheckoutContext);
+  const isCheckoutOpen = useSelector(selectCheckout);
 
   const handelCheckout = () => {
-    if (cartCount) setIsCheckoutOpen(!isCheckoutOpen);
+    if (cartCount) dispatch(setIsCheckoutOpen(!isCheckoutOpen));
   };
 
   useEffect(() => {
     if (isCheckoutOpen) {
       dispatch(setIsCartOpen(!isCartOpen));
       navigate('/checkout');
-      setIsCheckoutOpen(!isCheckoutOpen);
+      dispatch(setIsCheckoutOpen(!isCheckoutOpen));
     }
-  }, [isCartOpen, isCheckoutOpen, navigate, setIsCartOpen, setIsCheckoutOpen]);
+  }, [isCheckoutOpen]);
 
   return (
     <DropdownContainer>
