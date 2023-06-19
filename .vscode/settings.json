@@ -25,5 +25,6 @@
       "attr_quotes": "double"
     }
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "cSpell.words": ["persistor"]
 }
