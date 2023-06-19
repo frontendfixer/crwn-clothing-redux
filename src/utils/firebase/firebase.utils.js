@@ -66,7 +66,7 @@ export const addCollectionAndDocument = async (
   await batch.commit();
 };
 
-export const getCollectionAndDocument = async () => {
+export const getCategoriesAndDocument = async () => {
   const collectionRef = collection(db, 'categories');
   const q = query(collectionRef);
 
