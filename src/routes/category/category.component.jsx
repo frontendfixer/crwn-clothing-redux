@@ -8,11 +8,16 @@ import {
   CategoryItems,
 } from './category.style';
 import ProductCard from '../../components/product-card/product-card.component';
-import { selectCategoriesMap } from '../../store/categories/category.selector';
+import Spinner from '../../components/spinner/spinner.component';
+import {
+  selectCategoriesMap,
+  selectCategoriesIsLoading,
+} from '../../store/categories/category.selector';
 
 const Category = () => {
   const { category } = useParams();
   const categoriesMap = useSelector(selectCategoriesMap);
+  const isLoading = useSelector(selectCategoriesIsLoading);
 
   const [products, setProducts] = useState(categoriesMap[category]);
 
@@ -23,12 +28,16 @@ const Category = () => {
   return (
     <CategoryContainer>
       <CategoryTitle>{category}</CategoryTitle>
-      <CategoryItems>
-        {products &&
-          products.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-      </CategoryItems>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <CategoryItems>
+          {products &&
+            products.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+        </CategoryItems>
+      )}
     </CategoryContainer>
   );
 };
