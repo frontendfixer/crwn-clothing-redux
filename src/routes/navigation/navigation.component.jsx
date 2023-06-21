@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
 import {
@@ -6,18 +6,25 @@ import {
   LogoContainer,
   NavLinks,
   NavLink,
+  NavLinkWithIcon,
 } from './navigation.styles';
 import { ReactComponent as CrwnLogo } from '../../assets/images/crown.svg';
+import { ReactComponent as ShopIcon } from '../../assets/images/shop.svg';
+import { ReactComponent as UserLogo } from '../../assets/images/user.svg';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import Container from '../../components/container/container.component';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
+import { signOutStart } from '../../store/user/user.action';
 import { selectCurrentUser } from '../../store/user/user.selector';
-import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 const Navigation = () => {
+  const dispatch = useDispatch();
+
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
+
+  const signOutUser = () => dispatch(signOutStart());
 
   return (
     <>
@@ -26,14 +33,25 @@ const Navigation = () => {
           <CrwnLogo alt="crwn logo" className="logo" />
         </LogoContainer>
         <NavLinks>
-          <NavLink to="/shop">Shop</NavLink>
-          {currentUser ? (
-            <NavLink as="span" onClick={signOutUser} role="button" tabIndex={0}>
-              Sign out
-            </NavLink>
-          ) : (
-            <NavLink to="/auth">Sign in</NavLink>
-          )}
+          <NavLinkWithIcon>
+            <ShopIcon alt="" aria-hidden="true" className="icon" />
+            <NavLink to="/shop">Shop</NavLink>
+          </NavLinkWithIcon>
+          <NavLinkWithIcon>
+            <UserLogo alt="" aria-hidden="true" className="icon" />
+            {currentUser ? (
+              <NavLink
+                as="span"
+                onClick={signOutUser}
+                role="button"
+                tabIndex={0}
+              >
+                Sign out
+              </NavLink>
+            ) : (
+              <NavLink to="/auth">Sign in</NavLink>
+            )}
+          </NavLinkWithIcon>
           <CartIcon />
         </NavLinks>
         {isCartOpen && <CartDropdown />}

@@ -60,3 +60,9 @@ export const NavLink = styled(Link)`
     transform: scale(1);
   }
 `;
+
+export const NavLinkWithIcon = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
