@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import SignUpContainer from './sign-up-form.styles';
+import { SignUpContainer } from './sign-up-form.styles';
 import { signUpStart } from '../../store/user/user.action';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import FormInput from '../form-input/form-input.component';
@@ -15,6 +15,7 @@ const defaultFormFields = {
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
+
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
@@ -27,24 +28,17 @@ const SignUpForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  const handelSubmit = async event => {
+  const handelSubmit = event => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
+      // eslint-disable-next-line no-alert
       alert('password do not match');
       return;
     }
+    dispatch(signUpStart(email, password, displayName));
 
-    try {
-      dispatch(signUpStart(email, password, displayName));
-
-      resetFormFields();
-    } catch (error) {
-      console.log({ error });
-      if (error.code === 'auth/email-already-in-use') {
-        alert('User already exist');
-      }
-    }
+    resetFormFields();
   };
 
   return (

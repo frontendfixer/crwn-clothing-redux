@@ -13,4 +13,5 @@ export const SignInContainer = styled.div`
 export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 0.325rem;
 `;

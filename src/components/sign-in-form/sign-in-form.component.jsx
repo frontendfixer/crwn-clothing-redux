@@ -16,6 +16,7 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   const dispatch = useDispatch();
+
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -25,25 +26,11 @@ const SignInForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  const handelSubmit = async event => {
+  const handelSubmit = event => {
     event.preventDefault();
-    try {
-      const { user } = dispatch(emailSignInStart({ email, password }));
 
-      resetFormFields();
-    } catch (error) {
-      switch (error.code) {
-        case 'auth/wrong-password':
-          alert('Incorrect Password');
-          break;
-        case 'auth/user-not-found':
-          alert('No User associated with this email');
-          break;
-        default:
-          console.log({ error });
-          break;
-      }
-    }
+    dispatch(emailSignInStart({ email, password }));
+    resetFormFields();
   };
 
   const handelChange = event => {

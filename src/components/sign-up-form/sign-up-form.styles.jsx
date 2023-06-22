@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SignUpContainer = styled.div`
+export const SignUpContainer = styled.div`
   display: flex;
   max-width: 23.75rem;
   flex-direction: column;
@@ -10,4 +10,9 @@ const SignUpContainer = styled.div`
   }
 `;
 
-export default SignUpContainer;
+export const Error = styled.span`
+  display: block;
+  color: #ff5555;
+  font-style: italic;
+  font-weight: bold;
+`;
