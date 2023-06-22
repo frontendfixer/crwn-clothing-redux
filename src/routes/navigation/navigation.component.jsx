@@ -16,10 +16,14 @@ import CartIcon from '../../components/cart-icon/cart-icon.component';
 import Container from '../../components/container/container.component';
 import { selectIsCartOpen } from '../../store/cart/cart.selector';
 import { signOutStart } from '../../store/user/user.action';
-import { selectCurrentUser } from '../../store/user/user.selector';
+import {
+  selectCurrentUser,
+  selectLoadingState,
+} from '../../store/user/user.selector';
 
 const Navigation = () => {
   const dispatch = useDispatch();
+  const authLoading = useSelector(selectLoadingState);
 
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
@@ -49,7 +53,9 @@ const Navigation = () => {
                 Sign out
               </NavLink>
             ) : (
-              <NavLink to="/auth">Sign in</NavLink>
+              <NavLink to="/auth">
+                {authLoading ? 'Signing in...' : 'Sign in'}
+              </NavLink>
             )}
           </NavLinkWithIcon>
           <CartIcon />
