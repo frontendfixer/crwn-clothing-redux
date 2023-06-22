@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "lint:eslint": "eslint . --ext .js,.jsx",
     "fix:eslint": "eslint --fix  . --ext .js,.jsx",
     "lint:stylelint": "stylelint src/**/*.{css,scss} src/components/**/*.{css,scss}",
