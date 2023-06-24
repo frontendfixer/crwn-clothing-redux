@@ -24,3 +24,6 @@ dist
 
 # .bak files
 *.bak
+
+#vercel
+.vercel
