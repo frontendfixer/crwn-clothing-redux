@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
-  ItemContainer,
-  ItemBody,
-  ItemImage,
-  ItemName,
-  ItemQuantity,
-  Arrow,
-} from './cart-item.style';
-import {
   addItemToCart,
   removeItemFromCart,
 } from '../../store/cart/cart.action';
 import { selectCartItems } from '../../store/cart/cart.selector';
+import {
+  Arrow,
+  ItemBody,
+  ItemContainer,
+  ItemImage,
+  ItemName,
+  ItemQuantity,
+} from './cart-item.style';
 
 const CartItem = ({ cartItem }) => {
   const { name, quantity, price, imageUrl } = cartItem;

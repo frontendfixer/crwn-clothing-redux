@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
-  ItemContainer,
-  ImageContainer,
-  FlexContainer,
-  SpanBlock,
-  Button,
-} from './checkout-item.styles';
-import {
   addItemToCart,
-  removeItemFromCart,
   clearItemFromCart,
+  removeItemFromCart,
 } from '../../store/cart/cart.action';
 import { selectCartItems } from '../../store/cart/cart.selector';
+import {
+  Button,
+  FlexContainer,
+  ImageContainer,
+  ItemContainer,
+  SpanBlock,
+} from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;

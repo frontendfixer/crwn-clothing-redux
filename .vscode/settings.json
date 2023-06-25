@@ -25,6 +25,6 @@
       "attr_quotes": "double"
     }
   },
-  "emmet.triggerExpansionOnTab": true,
+  "emmet.triggerExpansionOnTab": false,
   "cSpell.words": ["Crwn", "persistor"]
 }

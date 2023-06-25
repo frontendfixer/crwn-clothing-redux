@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createSelector } from 'reselect';
 
 const selectCategoryReducer = store => store.categories;

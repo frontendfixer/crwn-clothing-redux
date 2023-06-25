@@ -1,5 +1,5 @@
-import DirectoryContainer from './directory.style';
 import DirectoryItem from '../directory-item/directory-item.component';
+import DirectoryContainer from './directory.style';
 
 const categories = [
   {

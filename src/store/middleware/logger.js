@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 export const loggerMIddleware = store => next => action => {
   if (!action.type) return next(action);
 

@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Authentication from './routes/authentication/authentication.component';
 import Checkout from './routes/checkout/checkout.component';

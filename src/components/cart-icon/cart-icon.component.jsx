@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { IconContainer, ItemCount, CountContainer } from './cart-icon.style';
 import { ReactComponent as ShoppingIcon } from '../../assets/images/shopping-bag.svg';
 import { setIsCartOpen } from '../../store/cart/cart.action';
 import {
-  selectIsCartOpen,
   selectCartCount,
+  selectIsCartOpen,
 } from '../../store/cart/cart.selector';
+import { CountContainer, IconContainer, ItemCount } from './cart-icon.style';
 
 const CartIcon = () => {
   const isCartOpen = useSelector(selectIsCartOpen);

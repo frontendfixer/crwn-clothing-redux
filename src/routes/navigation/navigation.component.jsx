@@ -1,13 +1,6 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 
-import {
-  NavigationContainer,
-  LogoContainer,
-  NavLinks,
-  NavLink,
-  NavLinkWithIcon,
-} from './navigation.styles';
 import { ReactComponent as CrwnLogo } from '../../assets/images/crown.svg';
 import { ReactComponent as ShopIcon } from '../../assets/images/shop.svg';
 import { ReactComponent as UserLogo } from '../../assets/images/user.svg';
@@ -20,6 +13,13 @@ import {
   selectCurrentUser,
   selectLoadingState,
 } from '../../store/user/user.selector';
+import {
+  LogoContainer,
+  NavigationContainer,
+  NavLink,
+  NavLinks,
+  NavLinkWithIcon,
+} from './navigation.styles';
 
 const Navigation = () => {
   const dispatch = useDispatch();

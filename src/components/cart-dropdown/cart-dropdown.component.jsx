@@ -2,21 +2,21 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import {
-  CartItems,
-  DropdownContainer,
-  EmptyMessage,
-} from './cart-dropdown.style';
 import { setIsCartOpen } from '../../store/cart/cart.action';
 import {
-  selectCartItems,
   selectCartCount,
+  selectCartItems,
   selectIsCartOpen,
 } from '../../store/cart/cart.selector';
 import { setIsCheckoutOpen } from '../../store/checkout/checkout.action';
 import { selectCheckout } from '../../store/checkout/checkout.selector';
 import Button from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
+import {
+  CartItems,
+  DropdownContainer,
+  EmptyMessage,
+} from './cart-dropdown.style';
 
 const CartDropdown = () => {
   const navigate = useNavigate();

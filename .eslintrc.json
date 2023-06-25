@@ -5,29 +5,34 @@
     "es2021": true,
     "node": true
   },
-  "plugins": ["react", "jsx-a11y", "import", "unused-imports"],
+  "plugins": ["react", "jsx-a11y", "import", "simple-import-sort"],
   "extends": [
     "airbnb",
     "airbnb/hooks",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "rules": {
+    "no-console": "off",
+    "no-alert": "off",
     "react-hooks/exhaustive-deps": "off",
     "default-param-last": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "arrow-body-style": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-no-constructed-context-values": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/label-has-associated-control": "warn",
-    "jsx-a11y/no-noninteractive-element-interactions": "warn",
     "jsx-quotes": ["error", "prefer-double"],
     "no-unused-vars": "warn",
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "warn",
+    "react/prop-types": "off",
     "semi": "error",
     "spaced-comment": 0
   },
@@ -37,41 +42,5 @@
     },
     "ecmaVersion": "latest",
     "sourceType": "module"
-  },
-  "overrides": [
-    {
-      "files": ["src/**/*.{js,jsx}"],
-      "rules": {
-        "react/prop-types": "off",
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "internal",
-              ["parent", "sibling"],
-              "index",
-              "object",
-              "type"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "./**/**\\.css",
-                "group": "type",
-                "position": "after"
-              }
-            ],
-            "pathGroupsExcludedImportTypes": ["builtin"],
-            "alphabetize": {
-              "order": "asc",
-              "caseInsensitive": true
-            },
-            "newlines-between": "always",
-            "warnOnUnassignedImports": true
-          }
-        ]
-      }
-    }
-  ]
+  }
 }
