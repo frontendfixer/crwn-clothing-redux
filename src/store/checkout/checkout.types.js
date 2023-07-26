@@ -1,3 +1,0 @@
-export const CHECKOUT_ACTION_TYPE = {
-  IS_CHECKOUT_OPEN: 'checkout/IS_CHECKOUT_OPEN',
-};
