@@ -5,15 +5,8 @@
     "es2021": true,
     "node": true
   },
-  "plugins": ["react", "jsx-a11y", "import", "simple-import-sort"],
-  "extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:import/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ],
+  "plugins": ["react", "import", "simple-import-sort"],
+  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "prettier"],
   "rules": {
     "no-console": "off",
     "no-alert": "off",
@@ -36,11 +29,13 @@
     "semi": "error",
     "spaced-comment": 0
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   }
 }
