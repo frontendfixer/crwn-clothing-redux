@@ -15,5 +15,10 @@ export type CategoryItem = {
 export type Category = {
   title: string
   imageUrl: string
-  item: CategoryItem[]
+  items: CategoryItem[]
+}
+
+
+export type CategoryMap = {
+  [key:string]: CategoryItem[]
 }
