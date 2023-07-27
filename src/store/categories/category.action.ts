@@ -1,5 +1,5 @@
 import {
-  ActionWithoutPayload,
+  Action,
   ActionWithPayload,
   createAction,
   withMatcher,
@@ -7,7 +7,7 @@ import {
 import { CATEGORIES_ACTION_TYPE, Category } from './category.types'
 
 export type FetchCategoryStart =
-  ActionWithoutPayload<CATEGORIES_ACTION_TYPE.FETCH_CATEGORIES_START>
+  Action<CATEGORIES_ACTION_TYPE.FETCH_CATEGORIES_START>
 
 export type FetchCategorySuccess = ActionWithPayload<
   CATEGORIES_ACTION_TYPE.FETCH_CATEGORIES_SUCCESS,

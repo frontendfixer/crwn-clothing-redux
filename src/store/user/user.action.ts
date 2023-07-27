@@ -3,15 +3,14 @@ import {
   UserData,
 } from '../../utils/firebase/firebase.utils'
 import {
-  ActionWithoutPayload,
+  Action,
   ActionWithPayload,
   createAction,
   withMatcher,
 } from '../../utils/reducer/reducer.utils'
 import { USER_ACTION_TYPE } from './user.types'
 
-export type CheckUserSession =
-  ActionWithoutPayload<USER_ACTION_TYPE.CHECK_USER_SESSION>
+export type CheckUserSession = Action<USER_ACTION_TYPE.CHECK_USER_SESSION>
 export const checkUserSession = withMatcher(
   (): CheckUserSession => createAction(USER_ACTION_TYPE.CHECK_USER_SESSION)
 )
@@ -25,8 +24,7 @@ export const setCurrentUser = withMatcher(
     createAction(USER_ACTION_TYPE.SET_CURRENT_USER, user)
 )
 
-export type GoogleSignInStart =
-  ActionWithoutPayload<USER_ACTION_TYPE.GOOGLE_SIGN_IN_START>
+export type GoogleSignInStart = Action<USER_ACTION_TYPE.GOOGLE_SIGN_IN_START>
 export const googleSignInStart = withMatcher(
   (): GoogleSignInStart => createAction(USER_ACTION_TYPE.GOOGLE_SIGN_IN_START)
 )
@@ -89,13 +87,12 @@ export const signUpFailed = withMatcher(
     createAction(USER_ACTION_TYPE.SIGN_UP_FAILED, error)
 )
 
-export type SignOutStart = ActionWithoutPayload<USER_ACTION_TYPE.SIGN_OUT_START>
+export type SignOutStart = Action<USER_ACTION_TYPE.SIGN_OUT_START>
 export const signOutStart = withMatcher(
   (): SignOutStart => createAction(USER_ACTION_TYPE.SIGN_OUT_START)
 )
 
-export type SignOutSuccess =
-  ActionWithoutPayload<USER_ACTION_TYPE.SIGN_OUT_SUCCESS>
+export type SignOutSuccess = Action<USER_ACTION_TYPE.SIGN_OUT_SUCCESS>
 export const signOutSuccess = withMatcher(
   (): SignOutSuccess => createAction(USER_ACTION_TYPE.SIGN_OUT_SUCCESS)
 )

@@ -14,8 +14,7 @@ export function withMatcher<
 >(actionCreator: AC): Matchable<AC>
 
 export function withMatcher(actionCreator: Function) {
-  // eslint-disable-next-line prefer-destructuring
-  const type = actionCreator().type
+  const { type } = actionCreator()
   return Object.assign(actionCreator, {
     type,
     match(action: AnyAction) {
@@ -29,7 +28,7 @@ export type ActionWithPayload<T, P> = {
   payload: P
 }
 
-export type ActionWithoutPayload<T> = {
+export type Action<T> = {
   type: T
 }
 
@@ -41,7 +40,7 @@ export function createAction<T extends string, P>(
 export function createAction<T extends string>(
   type: T,
   payload: void
-): ActionWithoutPayload<T>
+): Action<T>
 
 export function createAction<T extends string, P>(type: T, payload: P) {
   return { type, payload }
