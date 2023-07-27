@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/default-param-last */
 import { AnyAction } from 'redux'
 
 import { setCartItems, setIsCartOpen } from './cart.action'
@@ -14,8 +15,8 @@ export const CART_INITIAL_STATE: CartState = {
 }
 
 export const cartReducer = (
-  action: AnyAction,
-  state = CART_INITIAL_STATE
+  state = CART_INITIAL_STATE,
+  action: AnyAction
 ): CartState => {
   if (setIsCartOpen.match(action)) {
     return {

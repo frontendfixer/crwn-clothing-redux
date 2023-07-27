@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/default-param-last */
 import { AnyAction } from 'redux'
 
 import {
@@ -20,8 +21,8 @@ export const CATEGORIES_INITIAL_STATE: CategoriesState = {
 }
 
 export const categoriesReducer = (
-  action: AnyAction,
-  state = CATEGORIES_INITIAL_STATE
+  state = CATEGORIES_INITIAL_STATE,
+  action: AnyAction
 ): CategoriesState => {
   if (fetchCategoriesStart.match(action)) {
     return { ...state, isLoading: true }

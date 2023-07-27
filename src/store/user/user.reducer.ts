@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/default-param-last */
 import { AnyAction } from 'redux'
 
 import { UserData } from '../../utils/firebase/firebase.utils'
@@ -23,7 +24,7 @@ const INITIAL_STATE: UserState = {
   error: null,
 }
 
-export const userReducer = (action: AnyAction, state = INITIAL_STATE) => {
+export const userReducer = (state = INITIAL_STATE, action: AnyAction) => {
   if (signInSuccess.match(action)) {
     return {
       ...state,

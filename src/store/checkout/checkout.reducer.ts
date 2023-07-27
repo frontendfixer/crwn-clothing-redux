@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/default-param-last */
 import { AnyAction } from 'redux'
 
 import { setIsCheckoutOpen } from './checkout.action'
@@ -11,8 +12,8 @@ const CHECKOUT_INITIAL_STATE: CheckoutState = {
 }
 
 export const checkoutReducer = (
-  action: AnyAction,
-  state = CHECKOUT_INITIAL_STATE
+  state = CHECKOUT_INITIAL_STATE,
+  action: AnyAction
 ) => {
   if (setIsCheckoutOpen.match(action)) {
     return { ...state, isCheckoutOpen: action.payload }
