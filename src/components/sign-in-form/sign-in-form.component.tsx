@@ -48,7 +48,7 @@ const SignInForm = () => {
           type="email"
           onChange={handelChange}
           name="email"
-          value="email"
+          value={email}
           required
         />
 
@@ -57,7 +57,7 @@ const SignInForm = () => {
           type="password"
           onChange={handelChange}
           name="password"
-          value="password"
+          value={password}
           required
         />
         <ButtonGroup>
