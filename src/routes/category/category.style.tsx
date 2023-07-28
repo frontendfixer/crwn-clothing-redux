@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import device from '../../assets/styled/breakpoint';
+import device from '../../assets/styled/breakpoint'
 
 export const CategoryContainer = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: minmax(1fr);
   grid-template-rows: auto 1fr;
-`;
+`
 
 export const CategoryTitle = styled.h2`
   width: 100%;
@@ -18,7 +18,7 @@ export const CategoryTitle = styled.h2`
   color: hsl(0 0% 90%);
   padding-block: 10px;
   padding-inline: 20px;
-`;
+`
 export const CategoryItems = styled.div`
   display: grid;
   row-gap: 20px;
@@ -32,4 +32,4 @@ export const CategoryItems = styled.div`
   @media only screen and (min-width: ${device.medium}) {
     grid-template-columns: repeat(4, 1fr);
   }
-`;
+`
