@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from 'styled-components'
 
 const AuthenticationContainer = styled.div`
   display: flex;
@@ -10,6 +10,6 @@ const AuthenticationContainer = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
-`;
+`
 
-export default AuthenticationContainer;
+export default AuthenticationContainer
