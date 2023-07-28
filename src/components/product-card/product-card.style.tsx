@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { BaseButton, InvertedButton } from '../button/button.style';
+import { BaseButton, InvertedButton } from '../button/button.style'
 
 export const ProductCardContainer = styled.div`
   display: grid;
@@ -30,7 +30,7 @@ export const ProductCardContainer = styled.div`
     transform: scale(1);
     opacity: 1;
   }
-`;
+`
 
 export const ProductImage = styled.div`
   height: 336px;
@@ -46,7 +46,7 @@ export const ProductImage = styled.div`
       opacity: 0.8;
     }
   }
-`;
+`
 
 export const ProductCardFooter = styled.div`
   padding: 10px;
@@ -55,12 +55,12 @@ export const ProductCardFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-`;
+`
 
 export const ProductName = styled.h2`
   font-size: inherit;
   font-weight: 400;
-`;
+`
 export const ProductPrice = styled.span`
   padding-left: 4px;
   border-left: 2px solid hsl(252, 63%, 97%);
@@ -68,4 +68,4 @@ export const ProductPrice = styled.span`
     content: '\\0024';
     padding-right: 5px;
   }
-`;
+`
