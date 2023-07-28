@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const DirectoryContainer = styled.div`
   display: flex;
@@ -10,6 +10,6 @@ const DirectoryContainer = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
-`;
+`
 
-export default DirectoryContainer;
+export default DirectoryContainer
