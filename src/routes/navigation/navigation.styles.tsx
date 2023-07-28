@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 export const NavigationContainer = styled.div`
   display: flex;
@@ -11,21 +11,21 @@ export const NavigationContainer = styled.div`
   margin-block-end: 10px;
   margin-block-start: 20px;
   margin-inline: auto;
-`;
+`
 
 export const LogoContainer = styled(Link)`
   display: flex;
   width: 4.375rem;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
-`;
+`
 
 export const NavLink = styled(Link)`
   position: relative;
@@ -59,10 +59,10 @@ export const NavLink = styled(Link)`
     transform-origin: left;
     transform: scale(1);
   }
-`;
+`
 
 export const NavLinkWithIcon = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
-`;
+`
