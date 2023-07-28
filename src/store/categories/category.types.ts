@@ -18,7 +18,6 @@ export type Category = {
   items: CategoryItem[]
 }
 
-
 export type CategoryMap = {
-  [key:string]: CategoryItem[]
+  [key: string]: CategoryItem[]
 }
