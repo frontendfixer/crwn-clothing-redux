@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const SignUpContainer = styled.div`
   display: flex;
@@ -8,11 +8,11 @@ export const SignUpContainer = styled.div`
   h2 {
     margin: 0.625rem 0;
   }
-`;
+`
 
 export const Error = styled.span`
   display: block;
   color: #ff5555;
   font-style: italic;
   font-weight: bold;
-`;
+`
