@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import color from '../../assets/styled/color';
+import color from '../../assets/styled/color'
 
 export const DirectoryItemContainer = styled.div`
   display: flex;
@@ -11,8 +11,13 @@ export const DirectoryItemContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-`;
-export const BackgroundImage = styled.div`
+`
+
+type ImageURL = {
+  url: string
+}
+
+export const BackgroundImage = styled.div<ImageURL>`
   width: 100%;
   height: 100%;
   background-image: ${({ url }) => `url(${url})`};
@@ -23,7 +28,7 @@ export const BackgroundImage = styled.div`
     transform: scale(1.1);
     transition: transform 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
-`;
+`
 
 export const Body = styled.div`
   cursor: pointer;
@@ -52,4 +57,4 @@ export const Body = styled.div`
     font-size: 1rem;
     font-weight: lighter;
   }
-`;
+`
