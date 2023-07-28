@@ -1,14 +1,18 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import color from '../../assets/styled/color';
+import color from '../../assets/styled/color'
 
 const shrinkLabelStyles = css`
   top: -14px;
   font-size: 12px;
   color: ${color.black};
-`;
+`
 
-export const InputLabel = styled.label`
+type InputLabelProps = {
+  shrink?: boolean
+}
+
+export const InputLabel = styled.label<InputLabelProps>`
   position: absolute;
   top: 0.625rem;
   left: 0.3125rem;
@@ -19,7 +23,7 @@ export const InputLabel = styled.label`
   transition: 300ms ease all;
 
   ${({ shrink }) => shrink && shrinkLabelStyles}
-`;
+`
 
 export const Input = styled.input`
   display: block;
@@ -38,9 +42,9 @@ export const Input = styled.input`
   &:focus ~ ${InputLabel} {
     ${shrinkLabelStyles};
   }
-`;
+`
 
 export const Group = styled.div`
   position: relative;
   margin: 2.8125rem 0;
-`;
+`
