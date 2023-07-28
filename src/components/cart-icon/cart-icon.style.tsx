@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const IconContainer = styled.div`
   cursor: pointer;
@@ -6,7 +6,7 @@ export const IconContainer = styled.div`
   align-items: center;
   gap: 0.125rem;
   position: relative;
-`;
+`
 export const CountContainer = styled.div`
   width: 16px;
   height: 16px;
@@ -19,9 +19,9 @@ export const CountContainer = styled.div`
   position: absolute;
   top: -5px;
   right: -5px;
-`;
+`
 
 export const ItemCount = styled.span`
   font-size: 10px;
   font-weight: bold;
-`;
+`
