@@ -1,11 +1,11 @@
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import svgr from 'vite-plugin-svgr';
-import macrosPlugin from "vite-plugin-babel-macros"
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import macrosPlugin from 'vite-plugin-babel-macros'
+import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgr(), macrosPlugin(),],
+  plugins: [react(), svgr(), macrosPlugin()],
   server: {
     port: 5555,
     strictPort: true,
@@ -19,4 +19,4 @@ export default defineConfig({
   preview: {
     port: 8080,
   },
-});
+})
