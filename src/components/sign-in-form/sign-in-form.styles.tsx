@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const SignInContainer = styled.div`
   display: flex;
@@ -8,10 +8,10 @@ export const SignInContainer = styled.div`
   h2 {
     margin: 0.625rem 0;
   }
-`;
+`
 
 export const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 0.325rem;
-`;
+`
