@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-import device from '../../assets/styled/breakpoint';
-import color from '../../assets/styled/color';
+import device from '../../assets/styled/breakpoint'
+import color from '../../assets/styled/color'
 
 export const CategoryContainer = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ export const CategoryContainer = styled.div`
   justify-content: center;
   row-gap: 10px;
   margin-block-end: 30px;
-`;
+`
 
 export const CategoryHeading = styled.div`
   width: 100%;
@@ -26,7 +26,7 @@ export const CategoryHeading = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
 export const MoreButton = styled(Link)`
   padding: 4px 12px;
   color: ${color.white};
@@ -41,7 +41,7 @@ export const MoreButton = styled(Link)`
     background-color: ${color.white};
     color: ${color.black};
   }
-`;
+`
 
 export const ProductPreview = styled.div`
   display: grid;
@@ -57,4 +57,4 @@ export const ProductPreview = styled.div`
   @media screen and (min-width: ${device.medium}) {
     grid-template-columns: repeat(4, 1fr);
   }
-`;
+`
