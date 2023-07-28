@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const borderColor = '#ccc';
+const borderColor = '#ccc'
 
 export const ItemContainer = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ export const ItemContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${borderColor};
-`;
+`
 
 export const ImageContainer = styled.div`
   width: 30%;
@@ -22,16 +22,19 @@ export const ImageContainer = styled.div`
     aspect-ratio: 1/1;
     object-fit: cover;
   }
-`;
+`
+type FlexDirectionProps = {
+  flex?: string
+}
 
-export const FlexContainer = styled.div`
+export const FlexContainer = styled.div<FlexDirectionProps>`
   flex: 1;
   display: flex;
-  flex-direction: ${props => props.flex};
+  flex-direction: ${(props) => props.flex};
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-`;
+`
 
 export const SpanBlock = styled.span`
   &.name {
@@ -42,7 +45,7 @@ export const SpanBlock = styled.span`
     display: flex;
     gap: 6px;
   }
-`;
+`
 
 export const Button = styled.button`
   cursor: pointer;
@@ -53,4 +56,4 @@ export const Button = styled.button`
   border: none;
   outline: none;
   border-radius: 4px;
-`;
+`
