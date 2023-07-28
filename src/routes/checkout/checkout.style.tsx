@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div`
   width: 100%;
@@ -7,7 +7,7 @@ export const CheckoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const Heading = styled.h2`
   width: 100%;
@@ -18,7 +18,7 @@ export const Heading = styled.h2`
   background-color: #ddd;
   color: hsl(0, 0%, 20%);
   margin-block-end: 30px;
-`;
+`
 
 export const CartTotal = styled.div`
   width: 100%;
@@ -28,4 +28,4 @@ export const CartTotal = styled.div`
   font-size: clamp(18px, 1.53vw, 22px);
   font-weight: bold;
   /* border-top: 1px solid #ddd; */
-`;
+`
