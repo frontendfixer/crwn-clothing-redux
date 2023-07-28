@@ -1,4 +1,16 @@
-const SHOP_DATA = [
+type ItemType = {
+  id: number
+  name: string
+  imageUrl: string
+  price: number
+}
+
+type ShopDataType = {
+  title: string
+  items: ItemType[]
+}
+
+const SHOP_DATA: ShopDataType[] = [
   {
     title: 'Hats',
     items: [
@@ -234,6 +246,6 @@ const SHOP_DATA = [
       },
     ],
   },
-];
+]
 
-export default SHOP_DATA;
+export default SHOP_DATA
