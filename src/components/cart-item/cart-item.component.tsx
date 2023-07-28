@@ -12,7 +12,7 @@ import {
   ItemQuantity,
 } from './cart-item.style'
 
-type CartItemProps = {
+export type CartItemProps = {
   cartItem: CartItemType
 }
 
