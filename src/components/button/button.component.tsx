@@ -1,4 +1,7 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from 'react'
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/require-default-props */
+import { ButtonHTMLAttributes, ReactNode } from 'react'
+
 import { BaseButton, GoogleSignInButton, InvertedButton } from './button.style'
 
 export enum BUTTON_TYPE_CLASSES {
@@ -16,7 +19,7 @@ const getButton = (buttonType = BUTTON_TYPE_CLASSES.base): typeof BaseButton =>
 
 export type ButtonProps = {
   children: ReactNode
-  buttonType?: BUTTON_TYPE_CLASSES;
+  buttonType?: BUTTON_TYPE_CLASSES
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 const Button = ({ children, buttonType, ...otherProps }: ButtonProps) => {

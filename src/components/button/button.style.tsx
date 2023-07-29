@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import color from '../../assets/styled/color';
+import color from '../../assets/styled/color'
 
 export const BaseButton = styled.button`
   cursor: pointer;
@@ -21,7 +21,7 @@ export const BaseButton = styled.button`
     color: ${color.black};
     border: 1px solid ${color.black};
   }
-`;
+`
 
 export const GoogleSignInButton = styled(BaseButton)`
   background-color: ${color.google};
@@ -32,7 +32,7 @@ export const GoogleSignInButton = styled(BaseButton)`
     color: ${color.white};
     border-color: transparent;
   }
-`;
+`
 
 export const InvertedButton = styled(BaseButton)`
   background-color: ${color.white};
@@ -43,4 +43,4 @@ export const InvertedButton = styled(BaseButton)`
     background-color: ${color.black};
     color: ${color.white};
   }
-`;
+`
