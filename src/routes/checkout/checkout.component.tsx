@@ -15,11 +15,7 @@ const Checkout = () => {
     <CheckoutContainer>
       <Heading>Items in cart to checkout</Heading>
       {cartItems.map((cartItem) => (
-        <CheckoutItem
-          key={cartItem.id}
-          cartItem={cartItem}
-          cartTotal={cartTotal}
-        />
+        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <CartTotal>TOTAL: ${cartTotal}</CartTotal>
     </CheckoutContainer>
