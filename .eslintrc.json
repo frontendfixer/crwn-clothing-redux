@@ -6,7 +6,13 @@
     "node": true
   },
   "plugins": ["react", "import", "simple-import-sort"],
-  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "no-console": "off",
     "no-alert": "off",
@@ -26,8 +32,10 @@
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "semi": "error",
-    "spaced-comment": 0
+    "prettier/prettier": "warn",
+    "semi": "off",
+    "spaced-comment": 0,
+    "@typescript-eslint/naming-convention": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -36,6 +44,6 @@
     },
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "tsconfig.json"
   }
 }
