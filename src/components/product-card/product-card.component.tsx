@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { addItemToCart } from '../../store/cart/cart.action'
@@ -16,7 +17,7 @@ type ProductCardProps = {
   product: CategoryItem
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = memo(({ product }: ProductCardProps) => {
   const { name, price, imageUrl } = product
   const dispatch = useDispatch()
 
@@ -41,6 +42,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </Button>
     </ProductCardContainer>
   )
-}
+})
 
 export default ProductCard

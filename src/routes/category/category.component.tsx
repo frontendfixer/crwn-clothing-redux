@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
@@ -18,7 +18,7 @@ type CategoryRoutsParams = {
   category: string
 }
 
-const Category = () => {
+const Category = memo(() => {
   const { category } = useParams<
     keyof CategoryRoutsParams
   >() as CategoryRoutsParams
@@ -46,6 +46,6 @@ const Category = () => {
       )}
     </CategoryContainer>
   )
-}
+})
 
 export default Category

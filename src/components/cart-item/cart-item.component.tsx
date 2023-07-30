@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { addItemToCart, removeItemFromCart } from '../../store/cart/cart.action'
@@ -16,7 +17,7 @@ export type CartItemProps = {
   cartItem: CartItemType
 }
 
-const CartItem = ({ cartItem }: CartItemProps) => {
+const CartItem = memo(({ cartItem }: CartItemProps) => {
   const { name, quantity, price, imageUrl } = cartItem
   const dispatch = useDispatch()
 
@@ -39,6 +40,6 @@ const CartItem = ({ cartItem }: CartItemProps) => {
       </ItemBody>
     </ItemContainer>
   )
-}
+})
 
 export default CartItem
